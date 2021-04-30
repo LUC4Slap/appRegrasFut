@@ -1,3 +1,4 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { ScrollView, StyleSheet, View, Platform } from "react-native";
 import Body from "./components/Body";
@@ -15,6 +16,7 @@ export default class App extends React.Component {
     let { state } = this;
     return (
       <View style={styles.container}>
+        <StatusBar hidden />
         <Header
           titulo={
             Platform.OS == "android" ? state.messageAndroid : state.messageIos
